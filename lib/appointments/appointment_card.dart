@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class UpcomingAppointment extends StatelessWidget {
-  const UpcomingAppointment({super.key});
+class AppointmentCard extends StatelessWidget {
+  const AppointmentCard({super.key});
 
   Widget highlightedText(String text, IconData icon, BuildContext context) {
     return Container(
@@ -47,13 +47,15 @@ class UpcomingAppointment extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
     return Container(
+      margin: const EdgeInsets.fromLTRB(0, 7, 0, 7),
+      alignment: Alignment.center,
       height: 180,
-      width: width - 50,
+      width: width,
       child: Stack(
         children: [
           Container(
             height: 180,
-            width: width - 50,
+            width: width - 30,
             padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
             decoration: BoxDecoration(
               gradient: LinearGradient(
